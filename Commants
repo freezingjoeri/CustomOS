@@ -1,1 +1,25 @@
+Commants:
 
+Status checken
+sudo customos --status
+
+Naar Desktop‑mode (GUI aan: XFCE + LightDM)
+sudo customos --desktop
+Daarna:
+Wacht een paar seconden.
+Ga naar de grafische sessie met Ctrl + Alt + F1 t/m F7 (meestal F1 of F2).
+
+Naar Server‑mode (GUI uit, alleen services)
+sudo customos --server
+Dit:
+Stopt de display manager / X (LightDM).
+Laat Docker + (Jellyfin/Plex/Samba, als geïnstalleerd) doorlopen.
+
+Eenmalige health‑check, leesbare tekst
+guardian --check
+
+Raw metrics als JSON (voor bv. jq)
+guardian --json
+
+Als background watcher (doet systemd al, maar handmatig kan ook)
+guardian --watch
