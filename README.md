@@ -44,3 +44,11 @@ User for own name
 then
 cd CustomOS        # naar de binnenste CustomOS-map
 ls  
+
+voor nu instaleer eerst: sudo apt install dos2unix
+
+en dan: sudo apt install -y dos2unix
+dos2unix install.sh
+sudo bash install.sh
+
+instaleer eerst alles wat hier boven staat en dan de nieuwe {dit is tijdelijk totdat het gefixt is}
