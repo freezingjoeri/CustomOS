@@ -1,0 +1,176 @@
+/*
+ * CustomOS "Deep Sea Dark" GTK 3 theme (modern retro-tech)
+ *
+ * Primary    : #001219
+ * Secondary  : #005F73
+ * Accent     : #0A9396
+ * Text light : #E0FBFC
+ */
+
+@define-color deepsea-bg        #001219;
+@define-color deepsea-bg-alt    #001F2A;
+@define-color deepsea-secondary #005F73;
+@define-color deepsea-accent    #0A9396;
+@define-color deepsea-accent-soft #1B848A;
+@define-color deepsea-text      #E0FBFC;
+@define-color deepsea-muted     #94A1B2;
+@define-color deepsea-border    #003545;
+
+/* Base window background */
+window,
+.background {
+  background-color: @deepsea-bg;
+  color: @deepsea-text;
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 9.5pt;
+}
+
+/* Buttons */
+button {
+  background-image: none;
+  background-color: alpha(@deepsea-secondary, 0.92);
+  color: @deepsea-text;
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @deepsea-border;
+  padding: 5px 10px;
+  box-shadow: 0 0 0 1px alpha(@deepsea-border, 0.5);
+}
+
+button:hover {
+  background-color: alpha(@deepsea-accent, 0.95);
+}
+
+button:active {
+  background-color: shade(@deepsea-secondary, 1.25);
+  box-shadow: 0 0 0 1px alpha(@deepsea-accent, 0.7);
+}
+
+/* Header bars / titlebars */
+headerbar,
+.titlebar {
+  background-color: @deepsea-bg-alt;
+  color: @deepsea-text;
+  border-bottom: 1px solid @deepsea-border;
+  box-shadow: 0 1px 0 alpha(@deepsea-secondary, 0.6);
+}
+
+headerbar .title,
+headerbar .subtitle {
+  color: @deepsea-text;
+  text-shadow: 0 0 4px alpha(@deepsea-accent-soft, 0.9);
+}
+
+/* Entries / text fields */
+entry,
+searchentry {
+  background-color: @deepsea-bg-alt;
+  color: @deepsea-text;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @deepsea-border;
+  box-shadow: inset 0 0 0 1px alpha(@deepsea-secondary, 0.4);
+}
+
+entry:focus,
+searchentry:focus {
+  border-color: @deepsea-accent;
+  box-shadow: inset 0 0 0 1px alpha(@deepsea-accent, 0.7);
+}
+
+/* Lists / views */
+treeview,
+textview,
+.view {
+  background-color: @deepsea-bg;
+  color: @deepsea-text;
+}
+
+treeview:selected,
+textview:selected,
+.view:selected {
+  background-color: @deepsea-secondary;
+  color: @deepsea-text;
+}
+
+/* Scrollbars */
+scrollbar slider {
+  background-color: alpha(@deepsea-secondary, 0.9);
+  border-radius: 6px;
+}
+
+scrollbar slider:hover {
+  background-color: alpha(@deepsea-accent, 0.95);
+}
+
+/* Toolbars & panels */
+toolbar {
+  background-color: alpha(@deepsea-bg-alt, 0.96);
+  border-bottom: 1px solid @deepsea-border;
+  box-shadow: 0 1px 0 alpha(@deepsea-secondary, 0.3);
+}
+
+/* Menubars / menus */
+menubar,
+menu,
+.menu {
+  background-color: @deepsea-bg-alt;
+  color: @deepsea-text;
+}
+
+menuitem,
+.menuitem {
+  padding: 4px 8px;
+}
+
+menuitem:selected,
+.menuitem:selected {
+  background-color: @deepsea-secondary;
+  color: @deepsea-text;
+}
+
+/* XFCE panel (as generic panel) */
+.panel,
+.xfce4-panel,
+.xfce4-panel .background {
+  background-color: alpha(@deepsea-bg-alt, 0.98);
+  color: @deepsea-text;
+  border-top: 1px solid @deepsea-border;
+  border-bottom: 1px solid @deepsea-border;
+  box-shadow: 0 -1px 0 alpha(@deepsea-secondary, 0.4);
+}
+
+.xfce4-panel button {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 4px;
+  border: none;
+}
+
+.xfce4-panel button:hover {
+  background-color: alpha(@deepsea-secondary, 0.4);
+}
+
+.xfce4-panel button:checked {
+  background-color: alpha(@deepsea-accent, 0.7);
+}
+
+/* Links */
+*:link {
+  color: @deepsea-accent;
+}
+
+*:link:visited {
+  color: @deepsea-muted;
+}
+
+/* Notifications / infobars */
+infobar {
+  background-color: alpha(@deepsea-secondary, 0.95);
+  color: @deepsea-text;
+  border: 1px solid @deepsea-border;
+  border-radius: 4px;
+}
+
