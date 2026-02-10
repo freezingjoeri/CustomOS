@@ -35,3 +35,12 @@ guardian --json
 
 Als background watcher (doet systemd al, maar handmatig kan ook)
 guardian --watch
+
+first
+cd /home/user/CustomOS
+ls
+User for own name
+
+then
+cd CustomOS        # naar de binnenste CustomOS-map
+ls  
